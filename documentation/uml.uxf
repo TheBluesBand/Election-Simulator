@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>132</y>
+      <w>126</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+-first_name: string
+-last_name: string
+-populatrity: unsigned int
+--
++Person()
++Person(string, string)
++getName(): string
++getPopulatirity(): int
++updatePopulatirity(int): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>282</y>
+      <w>174</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Leader
+--
+-character: Characteristics
+-party: string
+--
++Leader()
++Leader(string, string, string, Characteristics)
++returnParty(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>156</x>
+      <y>228</y>
+      <w>48</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+Inherited</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>114</x>
+      <y>702</y>
+      <w>192</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Candidate
+--
+-totalVotes: unsigned int
+--
++Candidate()
++Candidate(string, string, string, Characteristics)
++updateVotes(int): void
++getTotalVotes(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>348</y>
+      <w>48</w>
+      <h>366</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+Inherited</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;590.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>48</y>
+      <w>126</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Issues
+--
+ECONOMY_FALLING
+EDUCATION_REFORM
+UNEMPLOYMENT_RISE
+DEFORESTATION
+MEDICARE
+NO_ISSUE
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>726</x>
+      <y>786</y>
+      <w>126</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Events
+--
+DEBATE
+LOCAL_APPEARANCE
+LOCAL_SPEECH
+PRESS_RELEASE
+INTERVIEW
+ISSUE_CONFERENCE
+NEWS_ARTICLE
+UNDEFINED_EVENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>84</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Characteristics
+--
+BUSINESS_CONNECTIONS
+ECONOMIC_EXP
+ENVIRONMENTAL_EXP
+EMPLOYMENT_EXP
+SCANDEL_EXP
+HEALTHCARE_EXP
+INFLUENTIAL
+POPULAR
+DEBATE_EXP
+UNDEFINED_CHARACTERISTIC</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>228</x>
+      <y>192</y>
+      <w>42</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>816</x>
+      <y>318</y>
+      <w>120</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>BasicRandom
+--
+
+
+--
++random_Int(int, int): int
++random_Float(int, int): float
++random_Bool(): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>156</y>
+      <w>210</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Issue
+--
+-type: Issues
+-IssueCode: int
+-description: string
+--
++Issue()
++Issue(int, Issues, string)
++getCode(): string
++getIssueType(): Issues
++getStatement(): string
++changeIssueType(Issues): void
++changeIssueCode(int): void
++add_impacting_characteristics(Characteristics): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>126</y>
+      <w>42</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>516</x>
+      <y>324</y>
+      <w>174</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Stance
+--
+-approach: float
+-significance: float
+-radius: float
+-RelatedIssue: Issue
+--
++Stance()
++Stance(float, float, Issue)
++Stance(float, float, float)
++Stance(float, float, float, Issue)
++updateRadius(int): void
++returnSignificance(): float
++changeSignificant(float): void
++returnApproach(): float
++changeApproach(float): void
++returnRadius(): float
++calCircumference(): float
++chanceRelatedIssue(Issues): void
++returnRelatedIssue(): Issue
++returnRelatedIssueStr(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>276</y>
+      <w>48</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;needs&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>672</y>
+      <w>216</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>Electorate
+--
+-name: string
+-code: string
+-geographicalArea: string
+-population: unsigned int
+-stanceList: vector&lt;Stance&gt;
+-stanceDistrubition: unsigned int
+-candidates: vector&lt;Candidates&gt;
+--
++Electorate(string, string, int, unsigned int, unsigned int)
++getName(): string
++getArea(): string
++getCode(): string
++getPopulation(): unsigned int
++getStanceDistrubtion(): unsigned int
++add_Stances(Stance): void
++add_candidates(Candidate): void
++update_populatiry_index(int, int): void
++update_stance_values(int, int): void
++returnCandidates(): vector&lt;Candidate&gt;
++returnCanidateIndex(int): Candidate
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>618</x>
+      <y>516</y>
+      <w>42</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>756</y>
+      <w>168</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;260.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>768</x>
+      <y>732</y>
+      <w>42</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>420</y>
+      <w>204</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>Party
+--
+-partyName: string
+-leader: Leader
+-localCandidates: vector&lt;Candidate&gt;
+-standardDeviation: unsigned int 
+-stances: vector&lt;Stance&gt;
+-manangement: ManagerialTeam
+-votes: unsigned int
+--
++Party()
++Party(string, Leader, ManagerialTeam, unsigned int)
++returnPartyName(): string
++returnLeader: Leader
++add_localCandidates(Candidate): void
++add_stance(Stance): void
++returnMangerialTeam(): ManagerialTeam
++returnVotes: int
++updateVotes(int): void
++returnLocalCandidates: vector&lt;Candidates&gt;
++getStanceDistrubtion(): unsigned int
++returnStances(): vector&lt;Stance&gt;
++returnStanceIndex(int i): Stance
++update_populatiry(int): void
++dailySpending(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>348</y>
+      <w>48</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;needs&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>648</y>
+      <w>48</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;needs&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>456</x>
+      <y>426</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>366</x>
+      <y>192</y>
+      <w>174</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>ManagerialTeam
+--
+-partyFunds: double
+-teamMembers: unsigned int
+-party: string
+--
++ManagerialTeam()
++ManagerialTeam(double, int, string)
++addFunds(double): void
++spendFunds(double): void
++countTeamMembers(): int
++returnParty(): string
++dailySpending(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>444</x>
+      <y>306</y>
+      <w>48</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;needs&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>738</x>
+      <y>444</y>
+      <w>342</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>Election
+--
+-partyNum: const unsigned int 
+-electoratesNum: unsigned int
+-parties: vector&lt;Party&gt;
+-electorates: vector&lt;Electorate&gt;
+-issues: vector&lt;Issue&gt;
+-campaingDays: int
+-randomGene: BasicRandom
+--
++main()
++Election(int, int)
++returnPartyNum(): int
++returnElectoratesNum(): int
++returnParties(): vector&lt;Party&gt;
++returnIndexParty(int): Party
++returnElectorates(): vector&lt;Electorate&gt;
+returnIssueVector(): vector&lt;Issue&gt;
++returnCampaignLength(): int
++returnGene(): BasicRandom
++addParties(Party): void
++addElectorates(Electorate): void
++loadParties(): void
++loadElectortes(int): void
++loadIssues(): void
++loadCandidates(): void
++generateElectorateStance(): void
++generatePartyStance(): void
++partiesReport(): void
++electoratesReport(): void
++issueReport(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>816</x>
+      <y>66</y>
+      <w>342</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Campaign
+--
+-partyFunds: double
+-teamMembers: unsigned int
+-party: string
+--
++Campaign()
++Campaign(int)
++getCurrentDay(): int
++updateCurrentDay(): void
++setCurrentDay(int): void
++runCampaign(std::vector&lt;Party&gt;, std::vector&lt;Electorate&gt;, std::vector&lt;Issue&gt;, int): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>276</y>
+      <w>42</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>690</y>
+      <w>84</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>534</y>
+      <w>318</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;510.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>984</x>
+      <y>168</y>
+      <w>48</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;needs&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;460.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>384</y>
+      <w>42</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>168</y>
+      <w>42</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;250.0</additional_attributes>
+  </element>
+</diagram>
